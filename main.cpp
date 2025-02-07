@@ -16,9 +16,7 @@ int main() {
         std::cin >> id;
         std::cin.ignore();
         std::getline(std::cin, name);
-
-        Student student(id, name);
-        myLMS.addStudent(student);
+        myLMS.addStudent(Student(id, name));
     }
 
     std::cout << "Enter the number of courses: ";
@@ -32,9 +30,7 @@ int main() {
         std::cin.ignore();
         std::getline(std::cin, name);
         std::cin >> credits;
-
-        Course course(id, name, credits);
-        myLMS.addCourse(course);
+        myLMS.addCourse(Course(id, name, credits));
     }
 
     int enrollments;
@@ -49,9 +45,5 @@ int main() {
     }
 
     myLMS.printDetails();
-
     return 0;
 }
-
-
-
